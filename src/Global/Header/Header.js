@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Nav, Navbar, Button, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import { HashLink } from "react-router-hash-link";
 import useAuth from "./../../contexts/useAuth";
+
 
 const Header = () => {
   const { user, admin, logOut } = useAuth();
@@ -33,7 +33,6 @@ const Header = () => {
                     <Dropdown.Toggle id="dropdown-basic">
                       Dashboard
                     </Dropdown.Toggle>
-
                     {admin ? (
                       <Dropdown.Menu>
                         <Dropdown.Item as={Link} to="/manageAllPorducts">
@@ -47,6 +46,9 @@ const Header = () => {
                         </Dropdown.Item>
                         <Dropdown.Item as={Link} to="/manageProducts">
                           Manage Products
+                        </Dropdown.Item>
+                        <Dropdown.Item as={Link} to="/pay">
+                          Pay
                         </Dropdown.Item>
                       </Dropdown.Menu>
                     ) : (

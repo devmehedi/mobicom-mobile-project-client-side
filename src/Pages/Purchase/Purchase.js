@@ -14,7 +14,7 @@ const Purchase = () => {
   const { purchase } = useParams();
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://murmuring-waters-68454.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -30,7 +30,7 @@ const Purchase = () => {
     console.log(data.email);
     console.log(data.productName);
     axios
-      .post("http://localhost:5000/orders", data)
+      .post("https://murmuring-waters-68454.herokuapp.com/orders", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("Registration Succefull");
@@ -57,7 +57,7 @@ const Purchase = () => {
 
                 <p>description : {ExactIteam[0]?.description}</p>
                 <h2 className="text-start fw-bold">
-                  Price : {ExactIteam[0]?.price}$
+                  Price : {ExactIteam[0]?.price}
                 </h2>
                 <p className="text-start">
                   Category : {ExactIteam[0]?.category}

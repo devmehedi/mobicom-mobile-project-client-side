@@ -3,7 +3,6 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   signOut,
-  getIdToken,
   onAuthStateChanged,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -15,7 +14,6 @@ const useFirebase = () => {
   const [user, setUsers] = useState({});
   const [admin, setAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [token, setToken] = useState("");
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
   const signinWithGoogle = () => {
@@ -35,9 +33,6 @@ const useFirebase = () => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUsers(user);
-        getIdToken(user).then((idToken) => {
-          setToken(idToken);
-        });
       } else {
         setUsers({});
       }
@@ -47,7 +42,7 @@ const useFirebase = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://murmuring-waters-68454.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -62,7 +57,6 @@ const useFirebase = () => {
   return {
     user,
     admin,
-    token,
     isLoading,
     signinWithGoogle,
     logOut,

@@ -1,9 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyCcE5sjEUbxL5yipTtbGqyFssZ5b6dBhVg",
-  authDomain: "mobi-com-e8f33.firebaseapp.com",
-  projectId: "mobi-com-e8f33",
-  storageBucket: "mobi-com-e8f33.appspot.com",
-  messagingSenderId: "68277104858",
-  appId: "1:68277104858:web:eeb96dac6b6f0f77adf5e3"
+  apiKey: "AIzaSyDRNBYwDeiLNkkXFXCVYAMAlPUl6az4oDg",
+  authDomain: "tecno-mobile-skytech.firebaseapp.com",
+  projectId: "tecno-mobile-skytech",
+  storageBucket: "tecno-mobile-skytech.appspot.com",
+  messagingSenderId: "835122685590",
+  appId: "1:835122685590:web:37298371c4ea4ddf1f84b7"
 };
-export default firebaseConfig;
+  
+  export default firebaseConfig;

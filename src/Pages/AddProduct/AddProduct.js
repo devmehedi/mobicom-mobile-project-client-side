@@ -14,7 +14,7 @@ const AddProduct = () => {
     data.email = user?.email;
     console.log(data.email);
     axios
-      .post("http://localhost:5000/products", data)
+      .post("https://murmuring-waters-68454.herokuapp.com/products", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("New Product Added Succefully");
