@@ -1,6 +1,6 @@
 # Getting Started with 
 
-This project was bootstrapped with [Create React App](https://mobi-com-e8f33.web.app/).
+This project was bootstrapped with (https://mobi-com-e8f33.web.app/).
 
 ![alt text](https://images.unsplash.com/photo-1556656793-08538906a9f8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fG1vYmlsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)
 
